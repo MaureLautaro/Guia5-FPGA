@@ -1,0 +1,24 @@
+# do sumador_completo.do 
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module sumador_completo
+# 
+# Top level modules:
+# 	sumador_completo
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module sumador_completo_vlg_sample_tst
+# -- Compiling module sumador_completo_vlg_check_tst
+# -- Compiling module sumador_completo_vlg_vec_tst
+# 
+# Top level modules:
+# 	sumador_completo_vlg_vec_tst
+# vsim -L cycloneiii_ver -L altera_ver -L altera_mf_ver -L 220model_ver -L sgate -c -t 1ps -novopt work.sumador_completo_vlg_vec_tst 
+# Loading work.sumador_completo_vlg_vec_tst
+# Loading work.sumador_completo
+# Loading cycloneiii_ver.cycloneiii_io_obuf
+# Loading cycloneiii_ver.cycloneiii_io_ibuf
+# Loading cycloneiii_ver.cycloneiii_lcell_comb
+# Loading work.sumador_completo_vlg_sample_tst
+# Loading work.sumador_completo_vlg_check_tst
+# Simulation passed !
+# ** Note: $finish    : sumador_completo.vt(179)
+#    Time: 1 us  Iteration: 0  Instance: /sumador_completo_vlg_vec_tst/tb_out

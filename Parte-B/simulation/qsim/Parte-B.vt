@@ -1,0 +1,311 @@
+// Copyright (C) 1991-2013 Altera Corporation
+// Your use of Altera Corporation's design tools, logic functions 
+// and other software and tools, and its AMPP partner logic 
+// functions, and any output files from any of the foregoing 
+// (including device programming or simulation files), and any 
+// associated documentation or information are expressly subject 
+// to the terms and conditions of the Altera Program License 
+// Subscription Agreement, Altera MegaCore Function License 
+// Agreement, or other applicable license agreement, including, 
+// without limitation, that your use is for the sole purpose of 
+// programming logic devices manufactured by Altera and sold by 
+// Altera or its authorized distributors.  Please refer to the 
+// applicable agreement for further details.
+
+// *****************************************************************************
+// This file contains a Verilog test bench with test vectors .The test vectors  
+// are exported from a vector file in the Quartus Waveform Editor and apply to  
+// the top level entity of the current Quartus project .The user can use this   
+// testbench to simulate his design using a third-party simulation tool .       
+// *****************************************************************************
+// Generated on "10/27/2025 11:46:48"
+                                                                        
+// Verilog Self-Checking Test Bench (with test vectors) for design :    mult2x2
+// 
+// Simulation tool : 3rd Party
+// 
+
+`timescale 1 ps/ 1 ps
+module mult2x2_vlg_sample_tst(
+	A0,
+	A1,
+	B0,
+	B1,
+	sampler_tx
+);
+input  A0;
+input  A1;
+input  B0;
+input  B1;
+output sampler_tx;
+
+reg sample;
+time current_time;
+always @(A0 or A1 or B0 or B1)
+                                                                                
+begin                                                 
+ if ($realtime > 0)                                   
+ begin                                                
+	if ($realtime == 0 || $realtime != current_time)  
+	begin									          
+		if (sample === 1'bx)                          
+			sample = 0;                               
+		else                                          
+			sample = ~sample;                         
+	end										          
+	current_time = $realtime;					      
+ end                                                  
+end                                                   
+
+assign sampler_tx = sample;
+endmodule
+
+module mult2x2_vlg_check_tst (
+	P0,
+	P1,
+	P2,
+	P3,
+	sampler_rx
+);
+input  P0;
+input  P1;
+input  P2;
+input  P3;
+input sampler_rx;
+
+reg  P0_expected;
+reg  P1_expected;
+reg  P2_expected;
+reg  P3_expected;
+
+reg  P0_prev;
+reg  P1_prev;
+reg  P2_prev;
+reg  P3_prev;
+
+reg  P0_expected_prev;
+reg  P1_expected_prev;
+reg  P2_expected_prev;
+reg  P3_expected_prev;
+
+reg  last_P0_exp;
+reg  last_P1_exp;
+reg  last_P2_exp;
+reg  last_P3_exp;
+
+reg trigger;
+
+integer i;
+integer nummismatches;
+
+reg [1:4] on_first_change ;
+
+
+initial
+begin
+trigger = 0;
+i = 0;
+nummismatches = 0;
+on_first_change = 4'b1;
+end
+
+// update real /o prevs
+
+always @(trigger)
+begin
+	P0_prev = P0;
+	P1_prev = P1;
+	P2_prev = P2;
+	P3_prev = P3;
+end
+
+// update expected /o prevs
+
+always @(trigger)
+begin
+	P0_expected_prev = P0_expected;
+	P1_expected_prev = P1_expected;
+	P2_expected_prev = P2_expected;
+	P3_expected_prev = P3_expected;
+end
+
+
+
+// expected P0
+initial
+begin
+	P0_expected = 1'bX;
+end 
+
+// expected P1
+initial
+begin
+	P1_expected = 1'bX;
+end 
+
+// expected P2
+initial
+begin
+	P2_expected = 1'bX;
+end 
+
+// expected P3
+initial
+begin
+	P3_expected = 1'bX;
+end 
+// generate trigger
+always @(P0_expected or P0 or P1_expected or P1 or P2_expected or P2 or P3_expected or P3)
+begin
+	trigger <= ~trigger;
+end
+
+always @(posedge sampler_rx or negedge sampler_rx)
+begin
+`ifdef debug_tbench
+	$display("Scanning pattern %d @time = %t",i,$realtime );
+	i = i + 1;
+	$display("| expected P0 = %b | expected P1 = %b | expected P2 = %b | expected P3 = %b | ",P0_expected_prev,P1_expected_prev,P2_expected_prev,P3_expected_prev);
+	$display("| real P0 = %b | real P1 = %b | real P2 = %b | real P3 = %b | ",P0_prev,P1_prev,P2_prev,P3_prev);
+`endif
+	if (
+		( P0_expected_prev !== 1'bx ) && ( P0_prev !== P0_expected_prev )
+		&& ((P0_expected_prev !== last_P0_exp) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port P0 :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", P0_expected_prev);
+		$display ("     Real value = %b", P0_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_P0_exp = P0_expected_prev;
+	end
+	if (
+		( P1_expected_prev !== 1'bx ) && ( P1_prev !== P1_expected_prev )
+		&& ((P1_expected_prev !== last_P1_exp) ||
+			on_first_change[2])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port P1 :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", P1_expected_prev);
+		$display ("     Real value = %b", P1_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[2] = 1'b0;
+		last_P1_exp = P1_expected_prev;
+	end
+	if (
+		( P2_expected_prev !== 1'bx ) && ( P2_prev !== P2_expected_prev )
+		&& ((P2_expected_prev !== last_P2_exp) ||
+			on_first_change[3])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port P2 :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", P2_expected_prev);
+		$display ("     Real value = %b", P2_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[3] = 1'b0;
+		last_P2_exp = P2_expected_prev;
+	end
+	if (
+		( P3_expected_prev !== 1'bx ) && ( P3_prev !== P3_expected_prev )
+		&& ((P3_expected_prev !== last_P3_exp) ||
+			on_first_change[4])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port P3 :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", P3_expected_prev);
+		$display ("     Real value = %b", P3_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[4] = 1'b0;
+		last_P3_exp = P3_expected_prev;
+	end
+
+	trigger <= ~trigger;
+end
+initial 
+
+begin 
+$timeformat(-12,3," ps",6);
+#1000000;
+if (nummismatches > 0)
+	$display ("%d mismatched vectors : Simulation failed !",nummismatches);
+else
+	$display ("Simulation passed !");
+$finish;
+end 
+endmodule
+
+module mult2x2_vlg_vec_tst();
+// constants                                           
+// general purpose registers
+reg A0;
+reg A1;
+reg B0;
+reg B1;
+// wires                                               
+wire P0;
+wire P1;
+wire P2;
+wire P3;
+
+wire sampler;                             
+
+// assign statements (if any)                          
+mult2x2 i1 (
+// port map - connection between master ports and signals/registers   
+	.A0(A0),
+	.A1(A1),
+	.B0(B0),
+	.B1(B1),
+	.P0(P0),
+	.P1(P1),
+	.P2(P2),
+	.P3(P3)
+);
+
+// A0
+initial
+begin
+	A0 = 1'b1;
+	A0 = #140000 1'b0;
+end 
+
+// A1
+initial
+begin
+	A1 = 1'b1;
+	A1 = #140000 1'b0;
+end 
+
+// B0
+initial
+begin
+	B0 = 1'b1;
+	B0 = #140000 1'b0;
+end 
+
+// B1
+initial
+begin
+	B1 = 1'b1;
+	B1 = #140000 1'b0;
+end 
+
+mult2x2_vlg_sample_tst tb_sample (
+	.A0(A0),
+	.A1(A1),
+	.B0(B0),
+	.B1(B1),
+	.sampler_tx(sampler)
+);
+
+mult2x2_vlg_check_tst tb_out(
+	.P0(P0),
+	.P1(P1),
+	.P2(P2),
+	.P3(P3),
+	.sampler_rx(sampler)
+);
+endmodule
+

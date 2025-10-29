@@ -1,0 +1,81 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\Lautaro21\Desktop\G5-TyDD2-2025\Parte-A\simulation\qsim
+vsumador_completo
+Z1 IS]kg9YCFOVkojPK97nLIo3
+Z2 VPkh?h;U[`OI3C?Lj=38WL3
+Z3 dC:\Users\Lautaro21\Desktop\G5-TyDD2-2025\Parte-A\simulation\qsim
+Z4 w1761441512
+Z5 8sumador_completo.vo
+Z6 Fsumador_completo.vo
+L0 31
+Z7 OV;L;10.1d;51
+r1
+31
+Z8 o-work work -O0
+!i10b 1
+Z9 !s100 ^6f<YQj:159^z3_G5I0R^1
+!s85 0
+Z10 !s108 1761441514.858000
+Z11 !s107 sumador_completo.vo|
+Z12 !s90 -work|work|sumador_completo.vo|
+!s101 -O0
+vsumador_completo_vlg_check_tst
+!i10b 1
+!s100 [7ihk;Gaz:5AB`o1`;zol1
+Im0Ni:BGj>bfD;2d1i271B1
+VN_C1]dld>_JX;z?5foZAO0
+R3
+Z13 w1761441510
+Z14 8sumador_completo.vt
+Z15 Fsumador_completo.vt
+L0 61
+R7
+r1
+!s85 0
+31
+Z16 !s108 1761441515.046000
+Z17 !s107 sumador_completo.vt|
+Z18 !s90 -work|work|sumador_completo.vt|
+!s101 -O0
+R8
+vsumador_completo_vlg_sample_tst
+!i10b 1
+!s100 >d3>j0Xgc[=:GMU3<?J`C3
+IWb0KYMma^9ezW6M`adbAe2
+VCJ^XCY5;nQzb?5:>kmYmB2
+R3
+R13
+R14
+R15
+L0 29
+R7
+r1
+!s85 0
+31
+R16
+R17
+R18
+!s101 -O0
+R8
+vsumador_completo_vlg_vec_tst
+!i10b 1
+!s100 aEQ]39c^PGGaTa[fSFfc<2
+IM8Z1YmT1GQ7_ko_8a_Ti;1
+VHlOb<KI2PN?8::mKGXccC1
+R3
+R13
+R14
+R15
+L0 183
+R7
+r1
+!s85 0
+31
+R16
+R17
+R18
+!s101 -O0
+R8
