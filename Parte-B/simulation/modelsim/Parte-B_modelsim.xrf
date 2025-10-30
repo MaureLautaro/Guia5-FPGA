@@ -1,9 +1,9 @@
 vendor_name = ModelSim
-source_file = 1, C:/Users/Lautaro21/Desktop/G5-TyDD2-2025/Parte-B/mult2x2.vhd
-source_file = 1, C:/Users/Lautaro21/Desktop/G5-TyDD2-2025/Parte-B/sumador_completo.vhd
-source_file = 1, C:/Users/Lautaro21/Desktop/G5-TyDD2-2025/Parte-B/mult2x2.vwf
-source_file = 1, C:/Users/Lautaro21/Desktop/G5-TyDD2-2025/Parte-B/mult2x2_testbench.vhd
-source_file = 1, C:/Users/Lautaro21/Desktop/G5-TyDD2-2025/Parte-B/db/Parte-B.cbx.xml
+source_file = 1, C:/Users/Lautaro21/Desktop/Guia5-FPGA/Parte-B/mult2x2.vhd
+source_file = 1, C:/Users/Lautaro21/Desktop/Guia5-FPGA/Parte-B/sumador_completo.vhd
+source_file = 1, C:/Users/Lautaro21/Desktop/Guia5-FPGA/Parte-B/mult2x2.vwf
+source_file = 1, C:/Users/Lautaro21/Desktop/Guia5-FPGA/Parte-B/mult2x2_testbench.vhd
+source_file = 1, C:/Users/Lautaro21/Desktop/Guia5-FPGA/Parte-B/db/Parte-B.cbx.xml
 source_file = 1, c:/altera/13.0sp1/quartus/libraries/vhdl/ieee/prmtvs_b.vhd
 source_file = 1, c:/altera/13.0sp1/quartus/libraries/vhdl/ieee/prmtvs_p.vhd
 source_file = 1, c:/altera/13.0sp1/quartus/libraries/vhdl/ieee/timing_b.vhd

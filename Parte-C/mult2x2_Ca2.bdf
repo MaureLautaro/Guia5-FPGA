@@ -35,7 +35,7 @@ applicable agreement for further details.
 	)
 	(rotate180)
 	(text "VCC" (rect 20 -1 40 9)(font "Arial" (font_size 6)))
-	(annotation_block (location)(rect 200 336 264 352))
+	(annotation_block (location)(rect 1064 -136 1128 -120))
 )
 (pin
 	(input)
@@ -53,7 +53,7 @@ applicable agreement for further details.
 	)
 	(rotate180)
 	(text "VCC" (rect 20 -1 40 9)(font "Arial" (font_size 6)))
-	(annotation_block (location)(rect 200 360 264 376))
+	(annotation_block (location)(rect 1064 -24 1128 -8))
 )
 (pin
 	(input)
@@ -71,7 +71,7 @@ applicable agreement for further details.
 	)
 	(rotate180)
 	(text "VCC" (rect 20 -1 40 9)(font "Arial" (font_size 6)))
-	(annotation_block (location)(rect 200 384 264 400))
+	(annotation_block (location)(rect 1064 88 1128 104))
 )
 (pin
 	(input)
@@ -89,7 +89,7 @@ applicable agreement for further details.
 	)
 	(rotate180)
 	(text "VCC" (rect 20 -1 40 9)(font "Arial" (font_size 6)))
-	(annotation_block (location)(rect 0 536 64 552))
+	(annotation_block (location)(rect 1072 200 1136 216))
 )
 (pin
 	(input)
@@ -106,6 +106,7 @@ applicable agreement for further details.
 		(line (pt 109 12)(pt 113 8))
 	)
 	(text "VCC" (rect 128 7 148 17)(font "Arial" (font_size 6)))
+	(annotation_block (location)(rect 488 680 552 696))
 )
 (pin
 	(output)
@@ -122,7 +123,7 @@ applicable agreement for further details.
 		(line (pt 82 8)(pt 78 12))
 		(line (pt 78 12)(pt 82 8))
 	)
-	(annotation_block (location)(rect 224 232 288 248))
+	(annotation_block (location)(rect 496 600 560 616))
 )
 (pin
 	(output)
@@ -139,7 +140,7 @@ applicable agreement for further details.
 		(line (pt 82 8)(pt 78 12))
 		(line (pt 78 12)(pt 82 8))
 	)
-	(annotation_block (location)(rect 120 56 216 72))
+	(annotation_block (location)(rect 1088 272 1184 288))
 )
 (pin
 	(output)
@@ -156,7 +157,7 @@ applicable agreement for further details.
 		(line (pt 82 8)(pt 78 12))
 		(line (pt 78 12)(pt 82 8))
 	)
-	(annotation_block (location)(rect 120 88 216 104))
+	(annotation_block (location)(rect 1088 384 1184 400))
 )
 (pin
 	(output)
@@ -173,7 +174,7 @@ applicable agreement for further details.
 		(line (pt 82 8)(pt 78 12))
 		(line (pt 78 12)(pt 82 8))
 	)
-	(annotation_block (location)(rect 120 120 184 136))
+	(annotation_block (location)(rect 1088 496 1152 512))
 )
 (pin
 	(output)
@@ -190,7 +191,7 @@ applicable agreement for further details.
 		(line (pt 82 8)(pt 78 12))
 		(line (pt 78 12)(pt 82 8))
 	)
-	(annotation_block (location)(rect 120 152 184 168))
+	(annotation_block (location)(rect 1088 608 1152 624))
 )
 (symbol
 	(rect 512 120 560 184)
@@ -1148,6 +1149,21 @@ applicable agreement for further details.
 	)
 	(flipy_rotate90)
 )
+(symbol
+	(rect 1000 672 1032 688)
+	(text "VCC" (rect 7 0 27 10)(font "Arial" (font_size 6)))
+	(text "inst18" (rect 3 5 32 17)(font "Arial" )(invisible))
+	(port
+		(pt 16 16)
+		(output)
+		(text "1" (rect 19 7 24 19)(font "Courier New" (bold))(invisible))
+		(text "1" (rect 19 7 24 19)(font "Courier New" (bold))(invisible))
+		(line (pt 16 16)(pt 16 8))
+	)
+	(drawing
+		(line (pt 8 8)(pt 24 8))
+	)
+)
 (connector
 	(pt 288 48)
 	(pt 288 40)
@@ -1273,24 +1289,8 @@ applicable agreement for further details.
 	(pt 488 240)
 )
 (connector
-	(pt 496 344)
-	(pt 496 336)
-)
-(connector
 	(pt 416 344)
 	(pt 496 344)
-)
-(connector
-	(pt 472 208)
-	(pt 504 208)
-)
-(connector
-	(pt 504 208)
-	(pt 504 272)
-)
-(connector
-	(pt 488 240)
-	(pt 488 272)
 )
 (connector
 	(pt 632 184)
@@ -1465,10 +1465,6 @@ applicable agreement for further details.
 	(pt 672 0)
 )
 (connector
-	(pt 504 208)
-	(pt 584 208)
-)
-(connector
 	(pt 584 208)
 	(pt 736 208)
 )
@@ -1573,10 +1569,6 @@ applicable agreement for further details.
 	(pt 912 704)
 )
 (connector
-	(pt 912 704)
-	(pt 968 704)
-)
-(connector
 	(pt 968 480)
 	(pt 968 384)
 )
@@ -1587,14 +1579,6 @@ applicable agreement for further details.
 (connector
 	(pt 968 592)
 	(pt 968 496)
-)
-(connector
-	(pt 968 704)
-	(pt 968 608)
-)
-(connector
-	(pt 968 608)
-	(pt 968 592)
 )
 (connector
 	(pt 912 280)
@@ -1657,10 +1641,6 @@ applicable agreement for further details.
 	(pt 728 688)
 )
 (connector
-	(pt 864 432)
-	(pt 864 656)
-)
-(connector
 	(pt 864 656)
 	(pt 864 688)
 )
@@ -1679,22 +1659,6 @@ applicable agreement for further details.
 (connector
 	(pt 816 320)
 	(pt 864 320)
-)
-(connector
-	(pt 256 40)
-	(pt 256 80)
-)
-(connector
-	(pt 240 -32)
-	(pt 240 80)
-)
-(connector
-	(pt 168 -32)
-	(pt 240 -32)
-)
-(connector
-	(pt 240 -32)
-	(pt 392 -32)
 )
 (connector
 	(pt 416 224)
@@ -1808,12 +1772,87 @@ applicable agreement for further details.
 	(pt 560 360)
 	(pt 560 384)
 )
+(connector
+	(pt 880 544)
+	(pt 864 544)
+)
+(connector
+	(pt 864 432)
+	(pt 864 544)
+)
+(connector
+	(pt 864 544)
+	(pt 864 656)
+)
+(connector
+	(pt 1016 688)
+	(pt 1016 704)
+)
+(connector
+	(pt 912 704)
+	(pt 968 704)
+)
+(connector
+	(pt 968 704)
+	(pt 1016 704)
+)
+(connector
+	(pt 968 592)
+	(pt 968 608)
+)
+(connector
+	(pt 968 608)
+	(pt 968 704)
+)
+(connector
+	(pt 504 272)
+	(pt 504 208)
+)
+(connector
+	(pt 472 208)
+	(pt 504 208)
+)
+(connector
+	(pt 504 208)
+	(pt 584 208)
+)
+(connector
+	(pt 488 272)
+	(pt 488 240)
+)
+(connector
+	(pt 496 344)
+	(pt 496 336)
+)
+(connector
+	(pt 240 240)
+	(pt 240 232)
+)
+(connector
+	(pt 272 96)
+	(pt 272 88)
+)
+(connector
+	(pt 256 96)
+	(pt 256 40)
+)
+(connector
+	(pt 168 -32)
+	(pt 240 -32)
+)
+(connector
+	(pt 240 -32)
+	(pt 392 -32)
+)
+(connector
+	(pt 240 96)
+	(pt 240 -32)
+)
 (junction (pt 624 0))
 (junction (pt 640 32))
 (junction (pt 584 208))
 (junction (pt 240 -32))
 (junction (pt 528 -32))
-(junction (pt 504 208))
 (junction (pt 536 360))
 (junction (pt 432 360))
 (junction (pt 368 528))
@@ -1836,3 +1875,6 @@ applicable agreement for further details.
 (junction (pt 864 656))
 (junction (pt 864 320))
 (junction (pt 816 224))
+(junction (pt 864 544))
+(junction (pt 968 704))
+(junction (pt 504 208))

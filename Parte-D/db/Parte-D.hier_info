@@ -1,0 +1,19 @@
+|mult2x2_unsigned_signed
+A_unsigned[0] => Mult0.IN1
+A_unsigned[1] => Mult0.IN0
+B_unsigned[0] => Mult0.IN3
+B_unsigned[1] => Mult0.IN2
+A_signed[0] => Mult1.IN1
+A_signed[1] => Mult1.IN0
+B_signed[0] => Mult1.IN3
+B_signed[1] => Mult1.IN2
+P_unsigned[0] <= Mult0.DB_MAX_OUTPUT_PORT_TYPE
+P_unsigned[1] <= Mult0.DB_MAX_OUTPUT_PORT_TYPE
+P_unsigned[2] <= Mult0.DB_MAX_OUTPUT_PORT_TYPE
+P_unsigned[3] <= Mult0.DB_MAX_OUTPUT_PORT_TYPE
+P_signed[0] <= Mult1.DB_MAX_OUTPUT_PORT_TYPE
+P_signed[1] <= Mult1.DB_MAX_OUTPUT_PORT_TYPE
+P_signed[2] <= Mult1.DB_MAX_OUTPUT_PORT_TYPE
+P_signed[3] <= Mult1.DB_MAX_OUTPUT_PORT_TYPE
+
+

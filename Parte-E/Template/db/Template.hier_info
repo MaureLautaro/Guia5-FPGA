@@ -1,0 +1,13 @@
+|MaquinaEstado
+clk => state~7.DATAIN
+reset => state~9.DATAIN
+x => state.DATAB
+x => state.DATAB
+x => state.DATAB
+x => state.DATAB
+Z[0] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+Z[1] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+Z[2] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+Z[3] <= <GND>
+
+

@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Parte-C
-Wed Oct 29 11:43:00 2025
+Wed Oct 29 20:34:53 2025
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -14,8 +14,11 @@ Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edit
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
   8. General Register Statistics
-  9. Elapsed Time Per Partition
- 10. Analysis & Synthesis Messages
+  9. Port Connectivity Checks: "sumador_completo:b2v_inst6"
+ 10. Port Connectivity Checks: "sumador_completo:b2v_inst14"
+ 11. Port Connectivity Checks: "sumador_completo:b2v_inst12"
+ 12. Elapsed Time Per Partition
+ 13. Analysis & Synthesis Messages
 
 
 
@@ -41,16 +44,16 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Wed Oct 29 11:43:00 2025           ;
+; Analysis & Synthesis Status        ; Successful - Wed Oct 29 20:34:53 2025           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; Parte-C                                         ;
-; Top-level Entity Name              ; sumador_completo                                ;
+; Top-level Entity Name              ; mult2x2_Ca2                                     ;
 ; Family                             ; Cyclone III                                     ;
-; Total logic elements               ; 2                                               ;
-;     Total combinational functions  ; 2                                               ;
-;     Dedicated logic registers      ; 0                                               ;
-; Total registers                    ; 0                                               ;
-; Total pins                         ; 5                                               ;
+; Total logic elements               ; 8                                               ;
+;     Total combinational functions  ; 4                                               ;
+;     Dedicated logic registers      ; 8                                               ;
+; Total registers                    ; 8                                               ;
+; Total pins                         ; 10                                              ;
 ; Total virtual pins                 ; 0                                               ;
 ; Total memory bits                  ; 0                                               ;
 ; Embedded Multiplier 9-bit elements ; 0                                               ;
@@ -64,7 +67,7 @@ applicable agreement for further details.
 ; Option                                                                     ; Setting            ; Default Value      ;
 +----------------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                                     ; EP3C120F780C7      ;                    ;
-; Top-level entity name                                                      ; sumador_completo   ; Parte-C            ;
+; Top-level entity name                                                      ; mult2x2_Ca2        ; Parte-C            ;
 ; Family name                                                                ; Cyclone III        ; Cyclone IV GX      ;
 ; Use smart compilation                                                      ; Off                ; Off                ;
 ; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
@@ -156,52 +159,56 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+--------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                   ;
-+----------------------------------+-----------------+-----------------+---------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                            ; Library ;
-+----------------------------------+-----------------+-----------------+---------------------------------------------------------+---------+
-; sumador_completo.vhd             ; yes             ; User VHDL File  ; C:/Users/Lautaro21/Desktop/Parte-C/sumador_completo.vhd ;         ;
-+----------------------------------+-----------------+-----------------+---------------------------------------------------------+---------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                              ;
++----------------------------------+-----------------+-----------------+--------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                       ; Library ;
++----------------------------------+-----------------+-----------------+--------------------------------------------------------------------+---------+
+; mult2x2_Ca2.vhd                  ; yes             ; User VHDL File  ; C:/Users/Lautaro21/Desktop/Guia5-FPGA/Parte-C/mult2x2_Ca2.vhd      ;         ;
+; sumador_completo.vhd             ; yes             ; User VHDL File  ; C:/Users/Lautaro21/Desktop/Guia5-FPGA/Parte-C/sumador_completo.vhd ;         ;
++----------------------------------+-----------------+-----------------+--------------------------------------------------------------------+---------+
 
 
-+-------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary           ;
-+---------------------------------------------+---------+
-; Resource                                    ; Usage   ;
-+---------------------------------------------+---------+
-; Estimated Total logic elements              ; 2       ;
-;                                             ;         ;
-; Total combinational functions               ; 2       ;
-; Logic element usage by number of LUT inputs ;         ;
-;     -- 4 input functions                    ; 0       ;
-;     -- 3 input functions                    ; 2       ;
-;     -- <=2 input functions                  ; 0       ;
-;                                             ;         ;
-; Logic elements by mode                      ;         ;
-;     -- normal mode                          ; 2       ;
-;     -- arithmetic mode                      ; 0       ;
-;                                             ;         ;
-; Total registers                             ; 0       ;
-;     -- Dedicated logic registers            ; 0       ;
-;     -- I/O registers                        ; 0       ;
-;                                             ;         ;
-; I/O pins                                    ; 5       ;
-; Embedded Multiplier 9-bit elements          ; 0       ;
-; Maximum fan-out node                        ; A~input ;
-; Maximum fan-out                             ; 2       ;
-; Total fan-out                               ; 13      ;
-; Average fan-out                             ; 1.08    ;
-+---------------------------------------------+---------+
++---------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary             ;
++---------------------------------------------+-----------+
+; Resource                                    ; Usage     ;
++---------------------------------------------+-----------+
+; Estimated Total logic elements              ; 8         ;
+;                                             ;           ;
+; Total combinational functions               ; 4         ;
+; Logic element usage by number of LUT inputs ;           ;
+;     -- 4 input functions                    ; 2         ;
+;     -- 3 input functions                    ; 1         ;
+;     -- <=2 input functions                  ; 1         ;
+;                                             ;           ;
+; Logic elements by mode                      ;           ;
+;     -- normal mode                          ; 4         ;
+;     -- arithmetic mode                      ; 0         ;
+;                                             ;           ;
+; Total registers                             ; 8         ;
+;     -- Dedicated logic registers            ; 8         ;
+;     -- I/O registers                        ; 0         ;
+;                                             ;           ;
+; I/O pins                                    ; 10        ;
+; Embedded Multiplier 9-bit elements          ; 0         ;
+; Maximum fan-out node                        ; clk~input ;
+; Maximum fan-out                             ; 8         ;
+; Total fan-out                               ; 43        ;
+; Average fan-out                             ; 1.34      ;
++---------------------------------------------+-----------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                         ;
-+----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
-; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name ; Library Name ;
-+----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
-; |sumador_completo          ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 5    ; 0            ; |sumador_completo   ; work         ;
-+----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                    ;
++----------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------+--------------+
+; Compilation Hierarchy Node       ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                      ; Library Name ;
++----------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------+--------------+
+; |mult2x2_Ca2                     ; 4 (1)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 10   ; 0            ; |mult2x2_Ca2                             ; work         ;
+;    |sumador_completo:b2v_inst12| ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mult2x2_Ca2|sumador_completo:b2v_inst12 ; work         ;
+;    |sumador_completo:b2v_inst16| ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mult2x2_Ca2|sumador_completo:b2v_inst16 ; work         ;
+;    |sumador_completo:b2v_inst17| ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mult2x2_Ca2|sumador_completo:b2v_inst17 ; work         ;
++----------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -210,7 +217,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 0     ;
+; Total registers                              ; 8     ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
@@ -218,6 +225,35 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Number of registers using Clock Enable       ; 0     ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "sumador_completo:b2v_inst6"                                                         ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; b    ; Input  ; Info     ; Stuck at GND                                                                        ;
+; cout ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------+
+; Port Connectivity Checks: "sumador_completo:b2v_inst14" ;
++------+-------+----------+-------------------------------+
+; Port ; Type  ; Severity ; Details                       ;
++------+-------+----------+-------------------------------+
+; b    ; Input ; Info     ; Stuck at VCC                  ;
+; cin  ; Input ; Info     ; Stuck at GND                  ;
++------+-------+----------+-------------------------------+
+
+
++---------------------------------------------------------+
+; Port Connectivity Checks: "sumador_completo:b2v_inst12" ;
++------+-------+----------+-------------------------------+
+; Port ; Type  ; Severity ; Details                       ;
++------+-------+----------+-------------------------------+
+; cin  ; Input ; Info     ; Stuck at GND                  ;
++------+-------+----------+-------------------------------+
 
 
 +-------------------------------+
@@ -235,25 +271,40 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Wed Oct 29 11:42:55 2025
+    Info: Processing started: Wed Oct 29 20:34:48 2025
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Parte-C -c Parte-C
 Warning (20028): Parallel compilation is not licensed and has been disabled
-Info (12021): Found 1 design units, including 1 entities, in source file mult2x2_ca2.bdf
+Info (12021): Found 2 design units, including 1 entities, in source file mult2x2_ca2.vhd
+    Info (12022): Found design unit 1: mult2x2_Ca2-bdf_type
     Info (12023): Found entity 1: mult2x2_Ca2
 Info (12021): Found 2 design units, including 1 entities, in source file sumador_completo.vhd
     Info (12022): Found design unit 1: sumador_completo-Behavioral
     Info (12023): Found entity 1: sumador_completo
-Info (12127): Elaborating entity "sumador_completo" for the top level hierarchy
+Info (12021): Found 2 design units, including 1 entities, in source file mult2x2_ca2_testbench.vhd
+    Info (12022): Found design unit 1: mult2x2_Ca2_testbench-test
+    Info (12023): Found entity 1: mult2x2_Ca2_testbench
+Info (12127): Elaborating entity "mult2x2_Ca2" for the top level hierarchy
+Warning (10812): VHDL warning at mult2x2_Ca2.vhd(89): sensitivity list already contains SYNTHESIZED_WIRE_40
+Warning (10812): VHDL warning at mult2x2_Ca2.vhd(101): sensitivity list already contains SYNTHESIZED_WIRE_40
+Warning (10812): VHDL warning at mult2x2_Ca2.vhd(113): sensitivity list already contains SYNTHESIZED_WIRE_41
+Warning (10812): VHDL warning at mult2x2_Ca2.vhd(125): sensitivity list already contains SYNTHESIZED_WIRE_41
+Warning (10812): VHDL warning at mult2x2_Ca2.vhd(137): sensitivity list already contains SYNTHESIZED_WIRE_40
+Warning (10812): VHDL warning at mult2x2_Ca2.vhd(149): sensitivity list already contains SYNTHESIZED_WIRE_40
+Warning (10812): VHDL warning at mult2x2_Ca2.vhd(161): sensitivity list already contains SYNTHESIZED_WIRE_41
+Warning (10812): VHDL warning at mult2x2_Ca2.vhd(173): sensitivity list already contains SYNTHESIZED_WIRE_41
+Info (12128): Elaborating entity "sumador_completo" for hierarchy "sumador_completo:b2v_inst12"
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "V" is stuck at GND
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 7 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 3 input pins
-    Info (21059): Implemented 2 output pins
-    Info (21061): Implemented 2 logic cells
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 4626 megabytes
-    Info: Processing ended: Wed Oct 29 11:43:00 2025
+Info (21057): Implemented 18 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 5 input pins
+    Info (21059): Implemented 5 output pins
+    Info (21061): Implemented 8 logic cells
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 11 warnings
+    Info: Peak virtual memory: 4641 megabytes
+    Info: Processing ended: Wed Oct 29 20:34:53 2025
     Info: Elapsed time: 00:00:05
     Info: Total CPU time (on all processors): 00:00:05
 
