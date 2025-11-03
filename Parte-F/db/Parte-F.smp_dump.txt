@@ -1,0 +1,8 @@
+
+State Machine - |I2C|fstate
+Name fstate.ACK fstate.GuardarDato fstate.Guardardir fstate.RW fstate.ocioso 
+fstate.ocioso 0 0 0 0 0 
+fstate.RW 0 0 0 1 1 
+fstate.Guardardir 0 0 1 0 1 
+fstate.GuardarDato 0 1 0 0 1 
+fstate.ACK 1 0 0 0 1 

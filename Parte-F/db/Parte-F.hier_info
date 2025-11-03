@@ -1,0 +1,17 @@
+|I2C
+reset => reg_fstate.ocioso.OUTPUTSELECT
+reset => reg_fstate.RW.OUTPUTSELECT
+reset => reg_fstate.Guardardir.OUTPUTSELECT
+reset => reg_fstate.GuardarDato.OUTPUTSELECT
+reset => reg_fstate.ACK.OUTPUTSELECT
+clock => fstate~1.DATAIN
+SDA => Selector0.IN4
+SDA => Selector1.IN1
+fin_dir => process_1.IN0
+fin_dir => process_1.IN0
+fin_dato => Selector0.IN2
+fin_dato => Selector2.IN2
+soy => process_1.IN1
+soy => process_1.IN1
+
+

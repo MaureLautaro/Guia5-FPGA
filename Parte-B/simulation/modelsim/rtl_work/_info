@@ -1,0 +1,110 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\Lautaro21\Desktop\Guia5-FPGA\Parte-B\simulation\modelsim
+Emult2x2
+Z1 w1761576507
+Z2 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
+Z3 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
+Z4 dC:\Users\Lautaro21\Desktop\Guia5-FPGA\Parte-B\simulation\modelsim
+Z5 8C:/Users/Lautaro21/Desktop/Guia5-FPGA/Parte-B/mult2x2.vhd
+Z6 FC:/Users/Lautaro21/Desktop/Guia5-FPGA/Parte-B/mult2x2.vhd
+l0
+L24
+VFU^9>4BjYBSN];m[ic?a:1
+Z7 OV;C;10.1d;51
+31
+Z8 !s108 1761914877.722000
+Z9 !s90 -reportprogress|300|-93|-work|work|C:/Users/Lautaro21/Desktop/Guia5-FPGA/Parte-B/mult2x2.vhd|
+Z10 !s107 C:/Users/Lautaro21/Desktop/Guia5-FPGA/Parte-B/mult2x2.vhd|
+Z11 o-93 -work work -O0
+Z12 tExplicit 1
+!s100 aL8bUgVLWaVGL]H5SKN7Q2
+!i10b 1
+Abdf_type
+R2
+R3
+DEx4 work 7 mult2x2 0 22 FU^9>4BjYBSN];m[ic?a:1
+l57
+L38
+V<?nUo;QEemHh_3dz6IXAg3
+R7
+31
+R8
+R9
+R10
+R11
+R12
+!s100 cC_OjZAa2A@j5:kd=aeF[0
+!i10b 1
+Emult2x2_testbench
+Z13 w1761579082
+R2
+R3
+R4
+Z14 8C:/Users/Lautaro21/Desktop/Guia5-FPGA/Parte-B/mult2x2_testbench.vhd
+Z15 FC:/Users/Lautaro21/Desktop/Guia5-FPGA/Parte-B/mult2x2_testbench.vhd
+l0
+L4
+VWPbz8J9c8V<j:68>FXm[k0
+!s100 nMXoiEUzSAKLF8f189@^?1
+R7
+31
+!i10b 1
+Z16 !s108 1761914878.394000
+Z17 !s90 -reportprogress|300|-93|-work|work|C:/Users/Lautaro21/Desktop/Guia5-FPGA/Parte-B/mult2x2_testbench.vhd|
+Z18 !s107 C:/Users/Lautaro21/Desktop/Guia5-FPGA/Parte-B/mult2x2_testbench.vhd|
+R11
+R12
+Abehavioral
+R2
+R3
+DEx4 work 17 mult2x2_testbench 0 22 WPbz8J9c8V<j:68>FXm[k0
+l34
+L7
+VC9dQMhg]:T^YXRV55CFYU0
+!s100 TgQ8Zf?Vi24=Y0I_klVm]1
+R7
+31
+!i10b 1
+R16
+R17
+R18
+R11
+R12
+Esumador_completo
+Z19 w1761440868
+R2
+R3
+R4
+Z20 8C:/Users/Lautaro21/Desktop/Guia5-FPGA/Parte-B/sumador_completo.vhd
+Z21 FC:/Users/Lautaro21/Desktop/Guia5-FPGA/Parte-B/sumador_completo.vhd
+l0
+L4
+V@31c<I;8hVEnGKH0F:jcF1
+R7
+31
+Z22 !s108 1761914878.097000
+Z23 !s90 -reportprogress|300|-93|-work|work|C:/Users/Lautaro21/Desktop/Guia5-FPGA/Parte-B/sumador_completo.vhd|
+Z24 !s107 C:/Users/Lautaro21/Desktop/Guia5-FPGA/Parte-B/sumador_completo.vhd|
+R11
+R12
+!s100 RidbK3YkP6n:oJGS8FKnC0
+!i10b 1
+Abehavioral
+R2
+R3
+DEx4 work 16 sumador_completo 0 22 @31c<I;8hVEnGKH0F:jcF1
+l14
+L13
+VOBeG[lRIQkHC6?<][gPkR1
+R7
+31
+R22
+R23
+R24
+R11
+R12
+!s100 f`=U2HAbffmanQT^91QYl1
+!i10b 1

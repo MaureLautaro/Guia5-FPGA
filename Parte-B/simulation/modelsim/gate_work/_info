@@ -1,0 +1,83 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\Lautaro21\Desktop\Guia5-FPGA\Parte-B\simulation\modelsim
+Emult2x2
+Z1 w1761756902
+Z2 DPx4 ieee 16 vital_primitives 0 22 9W@YP9_VCb?_GCJ8e:;YQ0
+Z3 DPx10 cycloneiii 20 cycloneiii_atom_pack 0 22 n^46VOjinLK5_01fgQc6Z0
+Z4 DPx4 ieee 12 vital_timing 0 22 7h8zz2S4HVg:a;2TBMI[j1
+Z5 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
+Z6 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
+Z7 DPx10 cycloneiii 21 cycloneiii_components 0 22 VeH8af>S`B?U[[D6_Khe@0
+Z8 dC:\Users\Lautaro21\Desktop\Guia5-FPGA\Parte-B\simulation\modelsim
+Z9 8Parte-B.vho
+Z10 FParte-B.vho
+l0
+L34
+VUAc87Z>_1nZzPXk`BnKfe2
+Z11 OV;C;10.1d;51
+31
+Z12 !s108 1761915005.633000
+Z13 !s90 -reportprogress|300|-93|-work|work|Parte-B.vho|
+Z14 !s107 Parte-B.vho|
+Z15 o-93 -work work -O0
+Z16 tExplicit 1
+!s100 [Pe?c<ia8:oa>16_kS6jF3
+!i10b 1
+Astructure
+R2
+R3
+R4
+R5
+R6
+R7
+DEx4 work 7 mult2x2 0 22 UAc87Z>_1nZzPXk`BnKfe2
+l89
+L58
+VNh7zhCa@a8mo@fiEM^E0g3
+R11
+31
+R12
+R13
+R14
+R15
+R16
+!s100 =[DTM0CSn38jk74mLHfZ53
+!i10b 1
+Emult2x2_testbench
+Z17 w1761579082
+R5
+R6
+R8
+Z18 8C:/Users/Lautaro21/Desktop/Guia5-FPGA/Parte-B/mult2x2_testbench.vhd
+Z19 FC:/Users/Lautaro21/Desktop/Guia5-FPGA/Parte-B/mult2x2_testbench.vhd
+l0
+L4
+VWPbz8J9c8V<j:68>FXm[k0
+!s100 nMXoiEUzSAKLF8f189@^?1
+R11
+31
+!i10b 1
+Z20 !s108 1761915006.102000
+Z21 !s90 -reportprogress|300|-93|-work|work|C:/Users/Lautaro21/Desktop/Guia5-FPGA/Parte-B/mult2x2_testbench.vhd|
+Z22 !s107 C:/Users/Lautaro21/Desktop/Guia5-FPGA/Parte-B/mult2x2_testbench.vhd|
+R15
+R16
+Abehavioral
+R5
+R6
+DEx4 work 17 mult2x2_testbench 0 22 WPbz8J9c8V<j:68>FXm[k0
+l34
+L7
+VC9dQMhg]:T^YXRV55CFYU0
+!s100 TgQ8Zf?Vi24=Y0I_klVm]1
+R11
+31
+!i10b 1
+R20
+R21
+R22
+R15
+R16

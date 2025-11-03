@@ -1,7 +1,7 @@
-Analysis & Synthesis Status : Successful - Sat Oct 25 22:44:15 2025
+Analysis & Synthesis Status : Successful - Fri Oct 31 11:49:02 2025
 Quartus II 64-Bit Version : 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition
 Revision Name : sumador_completo
-Top-level Entity Name : Block1
+Top-level Entity Name : sumador_completo
 Family : Cyclone III
 Total logic elements : 2
     Total combinational functions : 2

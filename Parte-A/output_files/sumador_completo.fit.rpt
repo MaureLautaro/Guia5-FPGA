@@ -1,5 +1,5 @@
 Fitter report for sumador_completo
-Sat Oct 25 22:44:59 2025
+Fri Oct 31 11:49:45 2025
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -63,10 +63,10 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Fitter Summary                                                                       ;
 +------------------------------------+-------------------------------------------------+
-; Fitter Status                      ; Successful - Sat Oct 25 22:44:59 2025           ;
+; Fitter Status                      ; Successful - Fri Oct 31 11:49:45 2025           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; sumador_completo                                ;
-; Top-level Entity Name              ; Block1                                          ;
+; Top-level Entity Name              ; sumador_completo                                ;
 ; Family                             ; Cyclone III                                     ;
 ; Device                             ; EP3C120F780C7                                   ;
 ; Timing Models                      ; Final                                           ;
@@ -202,7 +202,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +--------------+
 ; Pin-Out File ;
 +--------------+
-The pin-out file can be found in C:/Users/Lautaro21/Desktop/G5-TyDD2-2025/Parte-A/output_files/sumador_completo.pin.
+The pin-out file can be found in C:/Users/Lautaro21/Desktop/Guia5-FPGA/Parte-A/output_files/sumador_completo.pin.
 
 
 +---------------------------------------------------------------------+
@@ -1177,7 +1177,7 @@ Note: Pin directions (input, output or bidir) are based on device operating in u
 +----------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+---------------------+--------------+
 ; Compilation Hierarchy Node ; Logic Cells ; Dedicated Logic Registers ; I/O Registers ; Memory Bits ; M9Ks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Full Hierarchy Name ; Library Name ;
 +----------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+---------------------+--------------+
-; |Block1                    ; 2 (2)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 5    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; |Block1             ; work         ;
+; |sumador_completo          ; 2 (2)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 5    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; |sumador_completo   ; work         ;
 +----------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+---------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -1201,14 +1201,14 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Source Pin / Fanout ; Pad To Core Index ; Setting ;
 +---------------------+-------------------+---------+
 ; A                   ;                   ;         ;
-;      - inst3~0      ; 0                 ; 6       ;
-;      - inst5~0      ; 0                 ; 6       ;
+;      - S~0          ; 0                 ; 6       ;
+;      - Cout~0       ; 0                 ; 6       ;
 ; B                   ;                   ;         ;
-;      - inst3~0      ; 0                 ; 6       ;
-;      - inst5~0      ; 0                 ; 6       ;
+;      - S~0          ; 0                 ; 6       ;
+;      - Cout~0       ; 0                 ; 6       ;
 ; Cin                 ;                   ;         ;
-;      - inst3~0      ; 0                 ; 6       ;
-;      - inst5~0      ; 0                 ; 6       ;
+;      - S~0          ; 0                 ; 6       ;
+;      - Cout~0       ; 0                 ; 6       ;
 +---------------------+-------------------+---------+
 
 
@@ -1220,8 +1220,8 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Cin~input ; 2                   ;
 ; B~input   ; 2                   ;
 ; A~input   ; 2                   ;
-; inst5~0   ; 1                   ;
-; inst3~0   ; 1                   ;
+; Cout~0    ; 1                   ;
+; S~0       ; 1                   ;
 +-----------+---------------------+
 
 
@@ -1439,7 +1439,7 @@ Info (332130): Timing requirements not specified -- quality metrics such as perf
 Info (176233): Starting register packing
 Info (176235): Finished register packing
     Extra Info (176219): No registers were packed into other blocks
-Info (171121): Fitter preparation operations ending: elapsed time is 00:00:05
+Info (171121): Fitter preparation operations ending: elapsed time is 00:00:04
 Info (170189): Fitter placement preparation operations beginning
 Info (170190): Fitter placement preparation operations ending: elapsed time is 00:00:01
 Info (170191): Fitter placement operations beginning
@@ -1452,16 +1452,16 @@ Info (170194): Fitter routing operations ending: elapsed time is 00:00:01
 Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
     Info (170201): Optimizations that may affect the design's routability were skipped
     Info (170200): Optimizations that may affect the design's timing were skipped
-Info (11888): Total time spent on timing analysis during the Fitter is 0.22 seconds.
+Info (11888): Total time spent on timing analysis during the Fitter is 0.28 seconds.
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
-Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:04
-Info (144001): Generated suppressed messages file C:/Users/Lautaro21/Desktop/G5-TyDD2-2025/Parte-A/output_files/sumador_completo.fit.smsg
+Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:03
+Info (144001): Generated suppressed messages file C:/Users/Lautaro21/Desktop/Guia5-FPGA/Parte-A/output_files/sumador_completo.fit.smsg
 Info: Quartus II 64-Bit Fitter was successful. 0 errors, 5 warnings
-    Info: Peak virtual memory: 5033 megabytes
-    Info: Processing ended: Sat Oct 25 22:44:59 2025
+    Info: Peak virtual memory: 5037 megabytes
+    Info: Processing ended: Fri Oct 31 11:49:46 2025
     Info: Elapsed time: 00:00:43
     Info: Total CPU time (on all processors): 00:00:42
 
@@ -1469,6 +1469,6 @@ Info: Quartus II 64-Bit Fitter was successful. 0 errors, 5 warnings
 +----------------------------+
 ; Fitter Suppressed Messages ;
 +----------------------------+
-The suppressed messages can be found in C:/Users/Lautaro21/Desktop/G5-TyDD2-2025/Parte-A/output_files/sumador_completo.fit.smsg.
+The suppressed messages can be found in C:/Users/Lautaro21/Desktop/Guia5-FPGA/Parte-A/output_files/sumador_completo.fit.smsg.
 
 
