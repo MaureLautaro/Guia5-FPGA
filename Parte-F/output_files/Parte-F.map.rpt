@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Parte-F
-Mon Nov 03 18:52:26 2025
+Mon Nov 03 19:24:50 2025
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -13,11 +13,17 @@ Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edit
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. State Machine - |I2C|fstate
-  9. Registers Removed During Synthesis
- 10. General Register Statistics
- 11. Elapsed Time Per Partition
- 12. Analysis & Synthesis Messages
+  8. Analysis & Synthesis IP Cores Summary
+  9. General Register Statistics
+ 10. Parameter Settings for User Entity Instance: lpm_compare0:comparador|lpm_compare:LPM_COMPARE_component
+ 11. Parameter Settings for User Entity Instance: lpm_shiftreg0:REG7BITS|lpm_shiftreg:LPM_SHIFTREG_component
+ 12. Parameter Settings for User Entity Instance: lpm_constant0:constante|lpm_constant:LPM_CONSTANT_component
+ 13. Parameter Settings for User Entity Instance: lpm_counter1:CONT_MOD8|lpm_counter:LPM_COUNTER_component
+ 14. Parameter Settings for User Entity Instance: lpm_counter0:CONT_MOD7|lpm_counter:LPM_COUNTER_component
+ 15. Parameter Settings for User Entity Instance: lpm_shiftreg1:REG8BITS|lpm_shiftreg:LPM_SHIFTREG_component
+ 16. lpm_shiftreg Parameter Settings by Entity Instance
+ 17. Elapsed Time Per Partition
+ 18. Analysis & Synthesis Messages
 
 
 
@@ -43,16 +49,16 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Mon Nov 03 18:52:26 2025           ;
+; Analysis & Synthesis Status        ; Successful - Mon Nov 03 19:24:50 2025           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; Parte-F                                         ;
-; Top-level Entity Name              ; I2C                                             ;
+; Top-level Entity Name              ; I2C_Bloques                                     ;
 ; Family                             ; Cyclone III                                     ;
-; Total logic elements               ; 0                                               ;
-;     Total combinational functions  ; 0                                               ;
-;     Dedicated logic registers      ; 0                                               ;
-; Total registers                    ; 0                                               ;
-; Total pins                         ; 6                                               ;
+; Total logic elements               ; 17                                              ;
+;     Total combinational functions  ; 10                                              ;
+;     Dedicated logic registers      ; 13                                              ;
+; Total registers                    ; 13                                              ;
+; Total pins                         ; 11                                              ;
 ; Total virtual pins                 ; 0                                               ;
 ; Total memory bits                  ; 0                                               ;
 ; Embedded Multiplier 9-bit elements ; 0                                               ;
@@ -66,7 +72,7 @@ applicable agreement for further details.
 ; Option                                                                     ; Setting            ; Default Value      ;
 +----------------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                                     ; EP3C120F780C7      ;                    ;
-; Top-level entity name                                                      ; I2C                ; Parte-F            ;
+; Top-level entity name                                                      ; I2C_Bloques        ; Parte-F            ;
 ; Family name                                                                ; Cyclone III        ; Cyclone IV GX      ;
 ; Use smart compilation                                                      ; Off                ; Off                ;
 ; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
@@ -158,80 +164,103 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+--------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                 ;
-+----------------------------------+-----------------+-----------------+-------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                          ; Library ;
-+----------------------------------+-----------------+-----------------+-------------------------------------------------------+---------+
-; I2C.vhd                          ; yes             ; User VHDL File  ; C:/Users/Lautaro21/Desktop/Guia5-FPGA/Parte-F/I2C.vhd ;         ;
-+----------------------------------+-----------------+-----------------+-------------------------------------------------------+---------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                        ;
++----------------------------------+-----------------+------------------------------------+---------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                              ; Library ;
++----------------------------------+-----------------+------------------------------------+---------------------------------------------------------------------------+---------+
+; I2C_Bloques.bdf                  ; yes             ; User Block Diagram/Schematic File  ; C:/Users/Lautaro21/Desktop/Guia5-FPGA/Parte-F/I2C_Bloques.bdf             ;         ;
+; lpm_counter0.vhd                 ; yes             ; User Wizard-Generated File         ; C:/Users/Lautaro21/Desktop/Guia5-FPGA/Parte-F/lpm_counter0.vhd            ;         ;
+; lpm_counter1.vhd                 ; yes             ; User Wizard-Generated File         ; C:/Users/Lautaro21/Desktop/Guia5-FPGA/Parte-F/lpm_counter1.vhd            ;         ;
+; lpm_shiftreg0.vhd                ; yes             ; User Wizard-Generated File         ; C:/Users/Lautaro21/Desktop/Guia5-FPGA/Parte-F/lpm_shiftreg0.vhd           ;         ;
+; lpm_shiftreg1.vhd                ; yes             ; User Wizard-Generated File         ; C:/Users/Lautaro21/Desktop/Guia5-FPGA/Parte-F/lpm_shiftreg1.vhd           ;         ;
+; lpm_compare0.vhd                 ; yes             ; User Wizard-Generated File         ; C:/Users/Lautaro21/Desktop/Guia5-FPGA/Parte-F/lpm_compare0.vhd            ;         ;
+; lpm_constant0.vhd                ; yes             ; User Wizard-Generated File         ; C:/Users/Lautaro21/Desktop/Guia5-FPGA/Parte-F/lpm_constant0.vhd           ;         ;
+; lpm_compare.tdf                  ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_compare.tdf         ;         ;
+; comptree.inc                     ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/comptree.inc            ;         ;
+; altshift.inc                     ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/altshift.inc            ;         ;
+; aglobal130.inc                   ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/aglobal130.inc          ;         ;
+; db/cmpr_lkg.tdf                  ; yes             ; Auto-Generated Megafunction        ; C:/Users/Lautaro21/Desktop/Guia5-FPGA/Parte-F/db/cmpr_lkg.tdf             ;         ;
+; lpm_shiftreg.tdf                 ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_shiftreg.tdf        ;         ;
+; lpm_constant.inc                 ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_constant.inc        ;         ;
+; dffeea.inc                       ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/dffeea.inc              ;         ;
+; lpm_constant.tdf                 ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_constant.tdf        ;         ;
+; lpm_counter.tdf                  ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_counter.tdf         ;         ;
+; lpm_decode.inc                   ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_decode.inc          ;         ;
+; lpm_add_sub.inc                  ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_add_sub.inc         ;         ;
+; cmpconst.inc                     ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/cmpconst.inc            ;         ;
+; lpm_compare.inc                  ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_compare.inc         ;         ;
+; lpm_counter.inc                  ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_counter.inc         ;         ;
+; alt_counter_stratix.inc          ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/alt_counter_stratix.inc ;         ;
+; db/cntr_0oh.tdf                  ; yes             ; Auto-Generated Megafunction        ; C:/Users/Lautaro21/Desktop/Guia5-FPGA/Parte-F/db/cntr_0oh.tdf             ;         ;
+; db/cntr_52j.tdf                  ; yes             ; Auto-Generated Megafunction        ; C:/Users/Lautaro21/Desktop/Guia5-FPGA/Parte-F/db/cntr_52j.tdf             ;         ;
+; db/cmpr_gfc.tdf                  ; yes             ; Auto-Generated Megafunction        ; C:/Users/Lautaro21/Desktop/Guia5-FPGA/Parte-F/db/cmpr_gfc.tdf             ;         ;
++----------------------------------+-----------------+------------------------------------+---------------------------------------------------------------------------+---------+
 
 
-+-------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary           ;
-+---------------------------------------------+---------+
-; Resource                                    ; Usage   ;
-+---------------------------------------------+---------+
-;                                             ;         ;
-; Total combinational functions               ; 0       ;
-; Logic element usage by number of LUT inputs ;         ;
-;     -- 4 input functions                    ; 0       ;
-;     -- 3 input functions                    ; 0       ;
-;     -- <=2 input functions                  ; 0       ;
-;                                             ;         ;
-; Logic elements by mode                      ;         ;
-;     -- normal mode                          ; 0       ;
-;     -- arithmetic mode                      ; 0       ;
-;                                             ;         ;
-; Total registers                             ; 0       ;
-;     -- Dedicated logic registers            ; 0       ;
-;     -- I/O registers                        ; 0       ;
-;                                             ;         ;
-; I/O pins                                    ; 6       ;
-; Embedded Multiplier 9-bit elements          ; 0       ;
-; Maximum fan-out node                        ; fin_dir ;
-; Maximum fan-out                             ; 1       ;
-; Total fan-out                               ; 6       ;
-; Average fan-out                             ; 0.50    ;
-+---------------------------------------------+---------+
++-----------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary         ;
++---------------------------------------------+-------+
+; Resource                                    ; Usage ;
++---------------------------------------------+-------+
+; Estimated Total logic elements              ; 17    ;
+;                                             ;       ;
+; Total combinational functions               ; 10    ;
+; Logic element usage by number of LUT inputs ;       ;
+;     -- 4 input functions                    ; 2     ;
+;     -- 3 input functions                    ; 3     ;
+;     -- <=2 input functions                  ; 5     ;
+;                                             ;       ;
+; Logic elements by mode                      ;       ;
+;     -- normal mode                          ; 8     ;
+;     -- arithmetic mode                      ; 2     ;
+;                                             ;       ;
+; Total registers                             ; 13    ;
+;     -- Dedicated logic registers            ; 13    ;
+;     -- I/O registers                        ; 0     ;
+;                                             ;       ;
+; I/O pins                                    ; 11    ;
+; Embedded Multiplier 9-bit elements          ; 0     ;
+; Maximum fan-out node                        ; AND1  ;
+; Maximum fan-out                             ; 10    ;
+; Total fan-out                               ; 70    ;
+; Average fan-out                             ; 1.56  ;
++---------------------------------------------+-------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                         ;
-+----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
-; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name ; Library Name ;
-+----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
-; |I2C                       ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 6    ; 0            ; |I2C                ; work         ;
-+----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                     ;
++---------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------------------------------------+--------------+
+; Compilation Hierarchy Node                  ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                            ; Library Name ;
++---------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------------------------------------+--------------+
+; |I2C_Bloques                                ; 10 (2)            ; 13 (0)       ; 0           ; 0            ; 0       ; 0         ; 11   ; 0            ; |I2C_Bloques                                                                                   ; work         ;
+;    |lpm_compare0:comparador|                ; 2 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |I2C_Bloques|lpm_compare0:comparador                                                           ; work         ;
+;       |lpm_compare:LPM_COMPARE_component|   ; 2 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |I2C_Bloques|lpm_compare0:comparador|lpm_compare:LPM_COMPARE_component                         ; work         ;
+;          |cmpr_lkg:auto_generated|          ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |I2C_Bloques|lpm_compare0:comparador|lpm_compare:LPM_COMPARE_component|cmpr_lkg:auto_generated ; work         ;
+;    |lpm_counter0:CONT_MOD7|                 ; 3 (0)             ; 3 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |I2C_Bloques|lpm_counter0:CONT_MOD7                                                            ; work         ;
+;       |lpm_counter:LPM_COUNTER_component|   ; 3 (0)             ; 3 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |I2C_Bloques|lpm_counter0:CONT_MOD7|lpm_counter:LPM_COUNTER_component                          ; work         ;
+;          |cntr_52j:auto_generated|          ; 3 (3)             ; 3 (3)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |I2C_Bloques|lpm_counter0:CONT_MOD7|lpm_counter:LPM_COUNTER_component|cntr_52j:auto_generated  ; work         ;
+;    |lpm_counter1:CONT_MOD8|                 ; 3 (0)             ; 3 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |I2C_Bloques|lpm_counter1:CONT_MOD8                                                            ; work         ;
+;       |lpm_counter:LPM_COUNTER_component|   ; 3 (0)             ; 3 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |I2C_Bloques|lpm_counter1:CONT_MOD8|lpm_counter:LPM_COUNTER_component                          ; work         ;
+;          |cntr_0oh:auto_generated|          ; 3 (3)             ; 3 (3)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |I2C_Bloques|lpm_counter1:CONT_MOD8|lpm_counter:LPM_COUNTER_component|cntr_0oh:auto_generated  ; work         ;
+;    |lpm_shiftreg0:REG7BITS|                 ; 0 (0)             ; 7 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |I2C_Bloques|lpm_shiftreg0:REG7BITS                                                            ; work         ;
+;       |lpm_shiftreg:LPM_SHIFTREG_component| ; 0 (0)             ; 7 (7)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |I2C_Bloques|lpm_shiftreg0:REG7BITS|lpm_shiftreg:LPM_SHIFTREG_component                        ; work         ;
++---------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
-Encoding Type:  One-Hot
-+------------------------------------------------------------------------------------------------------+
-; State Machine - |I2C|fstate                                                                          ;
-+--------------------+------------+--------------------+-------------------+-----------+---------------+
-; Name               ; fstate.ACK ; fstate.GuardarDato ; fstate.Guardardir ; fstate.RW ; fstate.ocioso ;
-+--------------------+------------+--------------------+-------------------+-----------+---------------+
-; fstate.ocioso      ; 0          ; 0                  ; 0                 ; 0         ; 0             ;
-; fstate.RW          ; 0          ; 0                  ; 0                 ; 1         ; 1             ;
-; fstate.Guardardir  ; 0          ; 0                  ; 1                 ; 0         ; 1             ;
-; fstate.GuardarDato ; 0          ; 1                  ; 0                 ; 0         ; 1             ;
-; fstate.ACK         ; 1          ; 0                  ; 0                 ; 0         ; 1             ;
-+--------------------+------------+--------------------+-------------------+-----------+---------------+
-
-
-+------------------------------------------------------------+
-; Registers Removed During Synthesis                         ;
-+---------------------------------------+--------------------+
-; Register name                         ; Reason for Removal ;
-+---------------------------------------+--------------------+
-; fstate.ocioso                         ; Lost fanout        ;
-; fstate.RW                             ; Lost fanout        ;
-; fstate.Guardardir                     ; Lost fanout        ;
-; fstate.GuardarDato                    ; Lost fanout        ;
-; fstate.ACK                            ; Lost fanout        ;
-; Total Number of Removed Registers = 5 ;                    ;
-+---------------------------------------+--------------------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis IP Cores Summary                                                                                                                                  ;
++--------+--------------+---------+--------------+--------------+--------------------------------------+-----------------------------------------------------------------+
+; Vendor ; IP Core Name ; Version ; Release Date ; License Type ; Entity Instance                      ; IP Include File                                                 ;
++--------+--------------+---------+--------------+--------------+--------------------------------------+-----------------------------------------------------------------+
+; Altera ; LPM_COMPARE  ; 13.0    ; N/A          ; N/A          ; |I2C_Bloques|lpm_compare0:comparador ; C:/Users/Lautaro21/Desktop/Guia5-FPGA/Parte-F/lpm_compare0.vhd  ;
+; Altera ; LPM_CONSTANT ; 13.0    ; N/A          ; N/A          ; |I2C_Bloques|lpm_constant0:constante ; C:/Users/Lautaro21/Desktop/Guia5-FPGA/Parte-F/lpm_constant0.vhd ;
+; Altera ; LPM_COUNTER  ; 13.0    ; N/A          ; N/A          ; |I2C_Bloques|lpm_counter0:CONT_MOD7  ; C:/Users/Lautaro21/Desktop/Guia5-FPGA/Parte-F/lpm_counter0.vhd  ;
+; Altera ; LPM_COUNTER  ; 13.0    ; N/A          ; N/A          ; |I2C_Bloques|lpm_counter1:CONT_MOD8  ; C:/Users/Lautaro21/Desktop/Guia5-FPGA/Parte-F/lpm_counter1.vhd  ;
+; Altera ; LPM_SHIFTREG ; 13.0    ; N/A          ; N/A          ; |I2C_Bloques|lpm_shiftreg0:REG7BITS  ; C:/Users/Lautaro21/Desktop/Guia5-FPGA/Parte-F/lpm_shiftreg0.vhd ;
+; Altera ; LPM_SHIFTREG ; 13.0    ; N/A          ; N/A          ; |I2C_Bloques|lpm_shiftreg1:REG8BITS  ; C:/Users/Lautaro21/Desktop/Guia5-FPGA/Parte-F/lpm_shiftreg1.vhd ;
++--------+--------------+---------+--------------+--------------+--------------------------------------+-----------------------------------------------------------------+
 
 
 +------------------------------------------------------+
@@ -239,7 +268,7 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 0     ;
+; Total registers                              ; 13    ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
@@ -249,12 +278,154 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 
 
++--------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: lpm_compare0:comparador|lpm_compare:LPM_COMPARE_component ;
++------------------------+-------------+-----------------------------------------------------------------+
+; Parameter Name         ; Value       ; Type                                                            ;
++------------------------+-------------+-----------------------------------------------------------------+
+; lpm_width              ; 7           ; Signed Integer                                                  ;
+; LPM_REPRESENTATION     ; UNSIGNED    ; Untyped                                                         ;
+; LPM_PIPELINE           ; 0           ; Untyped                                                         ;
+; CHAIN_SIZE             ; 8           ; Untyped                                                         ;
+; ONE_INPUT_IS_CONSTANT  ; NO          ; Untyped                                                         ;
+; CARRY_CHAIN            ; MANUAL      ; Untyped                                                         ;
+; CASCADE_CHAIN          ; MANUAL      ; Untyped                                                         ;
+; CARRY_CHAIN_LENGTH     ; 48          ; CARRY_CHAIN_LENGTH                                              ;
+; CASCADE_CHAIN_LENGTH   ; 2           ; CASCADE_CHAIN_LENGTH                                            ;
+; DEVICE_FAMILY          ; Cyclone III ; Untyped                                                         ;
+; CBXI_PARAMETER         ; cmpr_lkg    ; Untyped                                                         ;
+; AUTO_CARRY_CHAINS      ; ON          ; AUTO_CARRY                                                      ;
+; IGNORE_CARRY_BUFFERS   ; OFF         ; IGNORE_CARRY                                                    ;
+; AUTO_CASCADE_CHAINS    ; ON          ; AUTO_CASCADE                                                    ;
+; IGNORE_CASCADE_BUFFERS ; OFF         ; IGNORE_CASCADE                                                  ;
++------------------------+-------------+-----------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: lpm_shiftreg0:REG7BITS|lpm_shiftreg:LPM_SHIFTREG_component ;
++------------------------+-------------+------------------------------------------------------------------+
+; Parameter Name         ; Value       ; Type                                                             ;
++------------------------+-------------+------------------------------------------------------------------+
+; LPM_WIDTH              ; 7           ; Signed Integer                                                   ;
+; LPM_DIRECTION          ; LEFT        ; Untyped                                                          ;
+; LPM_AVALUE             ; UNUSED      ; Untyped                                                          ;
+; LPM_SVALUE             ; UNUSED      ; Untyped                                                          ;
+; DEVICE_FAMILY          ; Cyclone III ; Untyped                                                          ;
+; AUTO_CARRY_CHAINS      ; ON          ; AUTO_CARRY                                                       ;
+; IGNORE_CARRY_BUFFERS   ; OFF         ; IGNORE_CARRY                                                     ;
+; AUTO_CASCADE_CHAINS    ; ON          ; AUTO_CASCADE                                                     ;
+; IGNORE_CASCADE_BUFFERS ; OFF         ; IGNORE_CASCADE                                                   ;
++------------------------+-------------+------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: lpm_constant0:constante|lpm_constant:LPM_CONSTANT_component ;
++--------------------+------------------+------------------------------------------------------------------+
+; Parameter Name     ; Value            ; Type                                                             ;
++--------------------+------------------+------------------------------------------------------------------+
+; LPM_WIDTH          ; 7                ; Signed Integer                                                   ;
+; LPM_CVALUE         ; 81               ; Signed Integer                                                   ;
+; ENABLE_RUNTIME_MOD ; NO               ; Untyped                                                          ;
+; CBXI_PARAMETER     ; lpm_constant_vf6 ; Untyped                                                          ;
++--------------------+------------------+------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: lpm_counter1:CONT_MOD8|lpm_counter:LPM_COUNTER_component ;
++------------------------+-------------+----------------------------------------------------------------+
+; Parameter Name         ; Value       ; Type                                                           ;
++------------------------+-------------+----------------------------------------------------------------+
+; AUTO_CARRY_CHAINS      ; ON          ; AUTO_CARRY                                                     ;
+; IGNORE_CARRY_BUFFERS   ; OFF         ; IGNORE_CARRY                                                   ;
+; AUTO_CASCADE_CHAINS    ; ON          ; AUTO_CASCADE                                                   ;
+; IGNORE_CASCADE_BUFFERS ; OFF         ; IGNORE_CASCADE                                                 ;
+; LPM_WIDTH              ; 3           ; Signed Integer                                                 ;
+; LPM_DIRECTION          ; UP          ; Untyped                                                        ;
+; LPM_MODULUS            ; 0           ; Untyped                                                        ;
+; LPM_AVALUE             ; UNUSED      ; Untyped                                                        ;
+; LPM_SVALUE             ; UNUSED      ; Untyped                                                        ;
+; LPM_PORT_UPDOWN        ; PORT_UNUSED ; Untyped                                                        ;
+; DEVICE_FAMILY          ; Cyclone III ; Untyped                                                        ;
+; CARRY_CHAIN            ; MANUAL      ; Untyped                                                        ;
+; CARRY_CHAIN_LENGTH     ; 48          ; CARRY_CHAIN_LENGTH                                             ;
+; NOT_GATE_PUSH_BACK     ; ON          ; NOT_GATE_PUSH_BACK                                             ;
+; CARRY_CNT_EN           ; SMART       ; Untyped                                                        ;
+; LABWIDE_SCLR           ; ON          ; Untyped                                                        ;
+; USE_NEW_VERSION        ; TRUE        ; Untyped                                                        ;
+; CBXI_PARAMETER         ; cntr_0oh    ; Untyped                                                        ;
++------------------------+-------------+----------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: lpm_counter0:CONT_MOD7|lpm_counter:LPM_COUNTER_component ;
++------------------------+-------------+----------------------------------------------------------------+
+; Parameter Name         ; Value       ; Type                                                           ;
++------------------------+-------------+----------------------------------------------------------------+
+; AUTO_CARRY_CHAINS      ; ON          ; AUTO_CARRY                                                     ;
+; IGNORE_CARRY_BUFFERS   ; OFF         ; IGNORE_CARRY                                                   ;
+; AUTO_CASCADE_CHAINS    ; ON          ; AUTO_CASCADE                                                   ;
+; IGNORE_CASCADE_BUFFERS ; OFF         ; IGNORE_CASCADE                                                 ;
+; LPM_WIDTH              ; 3           ; Signed Integer                                                 ;
+; LPM_DIRECTION          ; UP          ; Untyped                                                        ;
+; LPM_MODULUS            ; 7           ; Signed Integer                                                 ;
+; LPM_AVALUE             ; UNUSED      ; Untyped                                                        ;
+; LPM_SVALUE             ; UNUSED      ; Untyped                                                        ;
+; LPM_PORT_UPDOWN        ; PORT_UNUSED ; Untyped                                                        ;
+; DEVICE_FAMILY          ; Cyclone III ; Untyped                                                        ;
+; CARRY_CHAIN            ; MANUAL      ; Untyped                                                        ;
+; CARRY_CHAIN_LENGTH     ; 48          ; CARRY_CHAIN_LENGTH                                             ;
+; NOT_GATE_PUSH_BACK     ; ON          ; NOT_GATE_PUSH_BACK                                             ;
+; CARRY_CNT_EN           ; SMART       ; Untyped                                                        ;
+; LABWIDE_SCLR           ; ON          ; Untyped                                                        ;
+; USE_NEW_VERSION        ; TRUE        ; Untyped                                                        ;
+; CBXI_PARAMETER         ; cntr_52j    ; Untyped                                                        ;
++------------------------+-------------+----------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: lpm_shiftreg1:REG8BITS|lpm_shiftreg:LPM_SHIFTREG_component ;
++------------------------+-------------+------------------------------------------------------------------+
+; Parameter Name         ; Value       ; Type                                                             ;
++------------------------+-------------+------------------------------------------------------------------+
+; LPM_WIDTH              ; 8           ; Signed Integer                                                   ;
+; LPM_DIRECTION          ; LEFT        ; Untyped                                                          ;
+; LPM_AVALUE             ; UNUSED      ; Untyped                                                          ;
+; LPM_SVALUE             ; UNUSED      ; Untyped                                                          ;
+; DEVICE_FAMILY          ; Cyclone III ; Untyped                                                          ;
+; AUTO_CARRY_CHAINS      ; ON          ; AUTO_CARRY                                                       ;
+; IGNORE_CARRY_BUFFERS   ; OFF         ; IGNORE_CARRY                                                     ;
+; AUTO_CASCADE_CHAINS    ; ON          ; AUTO_CASCADE                                                     ;
+; IGNORE_CASCADE_BUFFERS ; OFF         ; IGNORE_CASCADE                                                   ;
++------------------------+-------------+------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------+
+; lpm_shiftreg Parameter Settings by Entity Instance                                      ;
++----------------------------+------------------------------------------------------------+
+; Name                       ; Value                                                      ;
++----------------------------+------------------------------------------------------------+
+; Number of entity instances ; 2                                                          ;
+; Entity Instance            ; lpm_shiftreg0:REG7BITS|lpm_shiftreg:LPM_SHIFTREG_component ;
+;     -- LPM_WIDTH           ; 7                                                          ;
+;     -- LPM_DIRECTION       ; LEFT                                                       ;
+; Entity Instance            ; lpm_shiftreg1:REG8BITS|lpm_shiftreg:LPM_SHIFTREG_component ;
+;     -- LPM_WIDTH           ; 8                                                          ;
+;     -- LPM_DIRECTION       ; LEFT                                                       ;
++----------------------------+------------------------------------------------------------+
+
+
 +-------------------------------+
 ; Elapsed Time Per Partition    ;
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:00     ;
+; Top            ; 00:00:01     ;
 +----------------+--------------+
 
 
@@ -264,7 +435,7 @@ Encoding Type:  One-Hot
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Mon Nov 03 18:52:22 2025
+    Info: Processing started: Mon Nov 03 19:24:42 2025
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Parte-F -c Parte-F
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 2 design units, including 1 entities, in source file i2c.vhd
@@ -290,24 +461,76 @@ Info (12021): Found 2 design units, including 1 entities, in source file lpm_com
 Info (12021): Found 2 design units, including 1 entities, in source file lpm_constant0.vhd
     Info (12022): Found design unit 1: lpm_constant0-SYN
     Info (12023): Found entity 1: lpm_constant0
-Info (12127): Elaborating entity "I2C" for the top level hierarchy
-Info (17049): 5 registers lost all their fanouts during netlist optimizations.
+Info (12127): Elaborating entity "I2C_Bloques" for the top level hierarchy
+Info (12128): Elaborating entity "lpm_compare0" for hierarchy "lpm_compare0:comparador"
+Info (12128): Elaborating entity "lpm_compare" for hierarchy "lpm_compare0:comparador|lpm_compare:LPM_COMPARE_component"
+Info (12130): Elaborated megafunction instantiation "lpm_compare0:comparador|lpm_compare:LPM_COMPARE_component"
+Info (12133): Instantiated megafunction "lpm_compare0:comparador|lpm_compare:LPM_COMPARE_component" with the following parameter:
+    Info (12134): Parameter "lpm_representation" = "UNSIGNED"
+    Info (12134): Parameter "lpm_type" = "LPM_COMPARE"
+    Info (12134): Parameter "lpm_width" = "7"
+Info (12021): Found 1 design units, including 1 entities, in source file db/cmpr_lkg.tdf
+    Info (12023): Found entity 1: cmpr_lkg
+Info (12128): Elaborating entity "cmpr_lkg" for hierarchy "lpm_compare0:comparador|lpm_compare:LPM_COMPARE_component|cmpr_lkg:auto_generated"
+Info (12128): Elaborating entity "lpm_shiftreg0" for hierarchy "lpm_shiftreg0:REG7BITS"
+Info (12128): Elaborating entity "lpm_shiftreg" for hierarchy "lpm_shiftreg0:REG7BITS|lpm_shiftreg:LPM_SHIFTREG_component"
+Info (12130): Elaborated megafunction instantiation "lpm_shiftreg0:REG7BITS|lpm_shiftreg:LPM_SHIFTREG_component"
+Info (12133): Instantiated megafunction "lpm_shiftreg0:REG7BITS|lpm_shiftreg:LPM_SHIFTREG_component" with the following parameter:
+    Info (12134): Parameter "lpm_direction" = "LEFT"
+    Info (12134): Parameter "lpm_type" = "LPM_SHIFTREG"
+    Info (12134): Parameter "lpm_width" = "7"
+Info (12128): Elaborating entity "lpm_constant0" for hierarchy "lpm_constant0:constante"
+Info (12128): Elaborating entity "lpm_constant" for hierarchy "lpm_constant0:constante|lpm_constant:LPM_CONSTANT_component"
+Info (12130): Elaborated megafunction instantiation "lpm_constant0:constante|lpm_constant:LPM_CONSTANT_component"
+Info (12133): Instantiated megafunction "lpm_constant0:constante|lpm_constant:LPM_CONSTANT_component" with the following parameter:
+    Info (12134): Parameter "lpm_cvalue" = "81"
+    Info (12134): Parameter "lpm_hint" = "ENABLE_RUNTIME_MOD=NO"
+    Info (12134): Parameter "lpm_type" = "LPM_CONSTANT"
+    Info (12134): Parameter "lpm_width" = "7"
+Info (12128): Elaborating entity "lpm_counter1" for hierarchy "lpm_counter1:CONT_MOD8"
+Info (12128): Elaborating entity "lpm_counter" for hierarchy "lpm_counter1:CONT_MOD8|lpm_counter:LPM_COUNTER_component"
+Info (12130): Elaborated megafunction instantiation "lpm_counter1:CONT_MOD8|lpm_counter:LPM_COUNTER_component"
+Info (12133): Instantiated megafunction "lpm_counter1:CONT_MOD8|lpm_counter:LPM_COUNTER_component" with the following parameter:
+    Info (12134): Parameter "lpm_direction" = "UP"
+    Info (12134): Parameter "lpm_port_updown" = "PORT_UNUSED"
+    Info (12134): Parameter "lpm_type" = "LPM_COUNTER"
+    Info (12134): Parameter "lpm_width" = "3"
+Info (12021): Found 1 design units, including 1 entities, in source file db/cntr_0oh.tdf
+    Info (12023): Found entity 1: cntr_0oh
+Info (12128): Elaborating entity "cntr_0oh" for hierarchy "lpm_counter1:CONT_MOD8|lpm_counter:LPM_COUNTER_component|cntr_0oh:auto_generated"
+Info (12128): Elaborating entity "lpm_counter0" for hierarchy "lpm_counter0:CONT_MOD7"
+Info (12128): Elaborating entity "lpm_counter" for hierarchy "lpm_counter0:CONT_MOD7|lpm_counter:LPM_COUNTER_component"
+Info (12130): Elaborated megafunction instantiation "lpm_counter0:CONT_MOD7|lpm_counter:LPM_COUNTER_component"
+Info (12133): Instantiated megafunction "lpm_counter0:CONT_MOD7|lpm_counter:LPM_COUNTER_component" with the following parameter:
+    Info (12134): Parameter "lpm_direction" = "UP"
+    Info (12134): Parameter "lpm_modulus" = "7"
+    Info (12134): Parameter "lpm_port_updown" = "PORT_UNUSED"
+    Info (12134): Parameter "lpm_type" = "LPM_COUNTER"
+    Info (12134): Parameter "lpm_width" = "3"
+Info (12021): Found 1 design units, including 1 entities, in source file db/cntr_52j.tdf
+    Info (12023): Found entity 1: cntr_52j
+Info (12128): Elaborating entity "cntr_52j" for hierarchy "lpm_counter0:CONT_MOD7|lpm_counter:LPM_COUNTER_component|cntr_52j:auto_generated"
+Info (12021): Found 1 design units, including 1 entities, in source file db/cmpr_gfc.tdf
+    Info (12023): Found entity 1: cmpr_gfc
+Info (12128): Elaborating entity "cmpr_gfc" for hierarchy "lpm_counter0:CONT_MOD7|lpm_counter:LPM_COUNTER_component|cntr_52j:auto_generated|cmpr_gfc:cmpr2"
+Info (12128): Elaborating entity "lpm_shiftreg1" for hierarchy "lpm_shiftreg1:REG8BITS"
+Info (12128): Elaborating entity "lpm_shiftreg" for hierarchy "lpm_shiftreg1:REG8BITS|lpm_shiftreg:LPM_SHIFTREG_component"
+Info (12130): Elaborated megafunction instantiation "lpm_shiftreg1:REG8BITS|lpm_shiftreg:LPM_SHIFTREG_component"
+Info (12133): Instantiated megafunction "lpm_shiftreg1:REG8BITS|lpm_shiftreg:LPM_SHIFTREG_component" with the following parameter:
+    Info (12134): Parameter "lpm_direction" = "LEFT"
+    Info (12134): Parameter "lpm_type" = "LPM_SHIFTREG"
+    Info (12134): Parameter "lpm_width" = "8"
+Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 6 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "fin_dir"
-    Warning (15610): No output dependent on input pin "soy"
-    Warning (15610): No output dependent on input pin "fin_dato"
-    Warning (15610): No output dependent on input pin "SDA"
-    Warning (15610): No output dependent on input pin "reset"
-    Warning (15610): No output dependent on input pin "clock"
-Info (21057): Implemented 6 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 6 input pins
-    Info (21059): Implemented 0 output pins
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 8 warnings
-    Info: Peak virtual memory: 4645 megabytes
-    Info: Processing ended: Mon Nov 03 18:52:26 2025
-    Info: Elapsed time: 00:00:04
-    Info: Total CPU time (on all processors): 00:00:04
+Info (21057): Implemented 28 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 4 input pins
+    Info (21059): Implemented 7 output pins
+    Info (21061): Implemented 17 logic cells
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 1 warning
+    Info: Peak virtual memory: 4648 megabytes
+    Info: Processing ended: Mon Nov 03 19:24:50 2025
+    Info: Elapsed time: 00:00:08
+    Info: Total CPU time (on all processors): 00:00:07
 
 

@@ -1,0 +1,85 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\Lautaro21\Desktop\Guia5-FPGA\Parte-F\simulation\qsim
+vI2C_Bloques
+Z1 !s100 ;cQ2J1=i2E=BoIB4Tc9@C3
+Z2 I_4fz^mAeITchRgMEKJQ>B1
+Z3 VM;SUJ4l5:OPEA_W5c?g2=2
+Z4 dC:\Users\Lautaro21\Desktop\Guia5-FPGA\Parte-F\simulation\qsim
+Z5 w1762210387
+Z6 8Parte-F.vo
+Z7 FParte-F.vo
+L0 31
+Z8 OV;L;10.1d;51
+r1
+31
+Z9 !s90 -work|work|Parte-F.vo|
+Z10 o-work work -O0
+Z11 n@i2@c_@bloques
+!i10b 1
+!s85 0
+Z12 !s108 1762210389.165000
+Z13 !s107 Parte-F.vo|
+!s101 -O0
+vI2C_Bloques_vlg_check_tst
+!i10b 1
+Z14 !s100 PNJXBlmY;o4U7mN6dM3E[3
+Z15 I5`dN;=z1Chjc1`d__1I430
+Z16 V<^7l_n<OMF^6PF1XG>f^23
+R4
+Z17 w1762210385
+Z18 8Parte-F.vt
+Z19 FParte-F.vt
+L0 63
+R8
+r1
+!s85 0
+31
+Z20 !s108 1762210389.368000
+Z21 !s107 Parte-F.vt|
+Z22 !s90 -work|work|Parte-F.vt|
+!s101 -O0
+R10
+Z23 n@i2@c_@bloques_vlg_check_tst
+vI2C_Bloques_vlg_sample_tst
+!i10b 1
+Z24 !s100 CCiPm`>5MT1QCQ_N3Y>Fm1
+Z25 I@QcEbYoT4EPz4fc5TC_>=1
+Z26 VGXD4]SN7:b_;f4=_>WEc>1
+R4
+R17
+R18
+R19
+L0 29
+R8
+r1
+!s85 0
+31
+R20
+R21
+R22
+!s101 -O0
+R10
+Z27 n@i2@c_@bloques_vlg_sample_tst
+vI2C_Bloques_vlg_vec_tst
+!i10b 1
+!s100 _7NfE:T0b8[nPVSemmMKV1
+I9`=2RRTAbjCL4k6MT83dm1
+Z28 V;G>3>d9TKCV6SojQA@j;o3
+R4
+R17
+R18
+R19
+Z29 L0 282
+R8
+r1
+!s85 0
+31
+R20
+R21
+R22
+!s101 -O0
+R10
+Z30 n@i2@c_@bloques_vlg_vec_tst

@@ -1,0 +1,41 @@
+-- ===========================================================
+-- Descripción: Flip-Flop JK con entrada de reloj y reset
+-- Autor: Maure Lautaro
+-- Fecha: 3/11/25
+-- ===========================================================
+
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+
+entity JK_FF is
+    Port (
+        J   : in  STD_LOGIC;      -- Entrada J
+        K   : in  STD_LOGIC;      -- Entrada K
+        CLK : in  STD_LOGIC;      -- Reloj
+        RST : in  STD_LOGIC;      -- Reset asíncrono
+        Q   : out STD_LOGIC       -- Salida
+    );
+end JK_FF;
+
+architecture Behavioral of JK_FF is
+    signal Q_int : STD_LOGIC := '0';  -- Señal interna del Flip-Flop
+begin
+
+    process (CLK, RST)
+    begin
+        if (RST = '1') then           -- Reset asíncrono
+            Q_int <= '0';
+        elsif rising_edge(CLK) then   -- En flanco ascendente del reloj
+            case (J & K) is
+                when "00" => Q_int <= Q_int;       -- Mantiene el valor
+                when "01" => Q_int <= '0';         -- Reinicia
+                when "10" => Q_int <= '1';         -- Setea
+                when "11" => Q_int <= not Q_int;   -- Toggle
+                when others => null;
+            end case;
+        end if;
+    end process;
+
+    Q <= Q_int;  -- Asignación a la salida
+
+end Behavioral;

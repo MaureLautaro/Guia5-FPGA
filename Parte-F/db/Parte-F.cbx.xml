@@ -1,5 +1,9 @@
 <?xml version="1.0" ?>
 <LOG_ROOT>
 	<PROJECT NAME="Parte-F">
+		<CBX_INST_ENTRY INSTANCE_NAME="|I2C_Bloques|lpm_compare0:comparador|lpm_compare:LPM_COMPARE_component" CBX_FILE_NAME="cmpr_lkg.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|I2C_Bloques|lpm_constant0:constante|lpm_constant:LPM_CONSTANT_component" CBX_FILE_NAME="lpm_constant_vf6.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|I2C_Bloques|lpm_counter0:CONT_MOD7|lpm_counter:LPM_COUNTER_component" CBX_FILE_NAME="cntr_52j.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|I2C_Bloques|lpm_counter1:CONT_MOD8|lpm_counter:LPM_COUNTER_component" CBX_FILE_NAME="cntr_0oh.tdf"/>
 	</PROJECT>
 </LOG_ROOT>
