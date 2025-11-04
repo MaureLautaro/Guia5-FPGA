@@ -43,6 +43,7 @@ ENTITY lpm_counter0 IS
 	PORT
 	(
 		clock		: IN STD_LOGIC ;
+		cout		: OUT STD_LOGIC ;
 		q		: OUT STD_LOGIC_VECTOR (2 DOWNTO 0)
 	);
 END lpm_counter0;
@@ -50,7 +51,8 @@ END lpm_counter0;
 
 ARCHITECTURE SYN OF lpm_counter0 IS
 
-	SIGNAL sub_wire0	: STD_LOGIC_VECTOR (2 DOWNTO 0);
+	SIGNAL sub_wire0	: STD_LOGIC ;
+	SIGNAL sub_wire1	: STD_LOGIC_VECTOR (2 DOWNTO 0);
 
 
 
@@ -64,12 +66,14 @@ ARCHITECTURE SYN OF lpm_counter0 IS
 	);
 	PORT (
 			clock	: IN STD_LOGIC ;
+			cout	: OUT STD_LOGIC ;
 			q	: OUT STD_LOGIC_VECTOR (2 DOWNTO 0)
 	);
 	END COMPONENT;
 
 BEGIN
-	q    <= sub_wire0(2 DOWNTO 0);
+	cout    <= sub_wire0;
+	q    <= sub_wire1(2 DOWNTO 0);
 
 	LPM_COUNTER_component : LPM_COUNTER
 	GENERIC MAP (
@@ -81,7 +85,8 @@ BEGIN
 	)
 	PORT MAP (
 		clock => clock,
-		q => sub_wire0
+		cout => sub_wire0,
+		q => sub_wire1
 	);
 
 
@@ -98,7 +103,7 @@ END SYN;
 -- Retrieval info: PRIVATE: CLK_EN NUMERIC "0"
 -- Retrieval info: PRIVATE: CNT_EN NUMERIC "0"
 -- Retrieval info: PRIVATE: CarryIn NUMERIC "0"
--- Retrieval info: PRIVATE: CarryOut NUMERIC "0"
+-- Retrieval info: PRIVATE: CarryOut NUMERIC "1"
 -- Retrieval info: PRIVATE: Direction NUMERIC "0"
 -- Retrieval info: PRIVATE: INTENDED_DEVICE_FAMILY STRING "Cyclone III"
 -- Retrieval info: PRIVATE: ModulusCounter NUMERIC "1"
@@ -117,12 +122,14 @@ END SYN;
 -- Retrieval info: CONSTANT: LPM_TYPE STRING "LPM_COUNTER"
 -- Retrieval info: CONSTANT: LPM_WIDTH NUMERIC "3"
 -- Retrieval info: USED_PORT: clock 0 0 0 0 INPUT NODEFVAL "clock"
+-- Retrieval info: USED_PORT: cout 0 0 0 0 OUTPUT NODEFVAL "cout"
 -- Retrieval info: USED_PORT: q 0 0 3 0 OUTPUT NODEFVAL "q[2..0]"
 -- Retrieval info: CONNECT: @clock 0 0 0 0 clock 0 0 0 0
+-- Retrieval info: CONNECT: cout 0 0 0 0 @cout 0 0 0 0
 -- Retrieval info: CONNECT: q 0 0 3 0 @q 0 0 3 0
 -- Retrieval info: GEN_FILE: TYPE_NORMAL lpm_counter0.vhd TRUE
 -- Retrieval info: GEN_FILE: TYPE_NORMAL lpm_counter0.inc FALSE
 -- Retrieval info: GEN_FILE: TYPE_NORMAL lpm_counter0.cmp TRUE
--- Retrieval info: GEN_FILE: TYPE_NORMAL lpm_counter0.bsf TRUE FALSE
+-- Retrieval info: GEN_FILE: TYPE_NORMAL lpm_counter0.bsf TRUE
 -- Retrieval info: GEN_FILE: TYPE_NORMAL lpm_counter0_inst.vhd FALSE
 -- Retrieval info: LIB_FILE: lpm
